@@ -85,8 +85,8 @@ n/2^k = 1, T(1) = 0
 n = 2^k 
 k = log2(n)
 T(n) = 2^log2(n)T(1) + 10nlog2(n) = (n)T(1) + 10nlog2(n)
-**T(n) = 10nlog2(n)**
-
+**T(n) = 10nlog2(n)** =
+Theta(nlog(n))
 
 
 
