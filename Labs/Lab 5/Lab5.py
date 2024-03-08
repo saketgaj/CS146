@@ -9,13 +9,12 @@ def isValidBST(self, root):
        
         list = []
         traverse(root, list)
-        valid = True
         prev = list[0]
 
         for i in range(1, len(list)):
            
            if list[i].val <= prev.val:
-                valid = False
+                return False
            prev = list[i] 
         
-        return valid
+        return True
