@@ -1,24 +1,17 @@
 public boolean isValidBST(TreeNode root) {
-        List<TreeNode> list = new LinkedList<>();
-        traverse(root, list);
-        
-        TreeNode prev = list.get(0);
-        for(int i = 1; i < list.size(); i++){
-            if(list.get(i).val <= prev.val){
-                return false;
-            }
-            prev = list.get(i);
-        }
-
-        return true;
-}
-
-private void traverse(TreeNode root, List<TreeNode> list) {
+        long minVal = Long.MIN_VALUE;
         if(root == null){
-            return;
+            return true;
         }
-
-        traverse(root.left, list);
-        list.add(root);
-        traverse(root.right, list);
+        if(!isValidBST(root.left)){
+            return false;
+        }
+        if(minVal >= root.val){
+            return false;
+        }
+        minVal = root.val;
+        if(!isValidBST(root.right)){
+            return false;
+        }
+        return true;
 }
