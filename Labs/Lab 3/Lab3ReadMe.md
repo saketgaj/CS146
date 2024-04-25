@@ -26,10 +26,10 @@ Thus, 2^2n is asymptotically greater
 
 **Problem 2:**
 Best Case: O(1) when multiple of 2
-Average Case: O(root(n)) when prime number
+Average, Worst Case: O(root(n)) when prime number
 i^2 = n
 i = Theta(root(n))
-Worst Case: O(n) 
+
 
 
 
